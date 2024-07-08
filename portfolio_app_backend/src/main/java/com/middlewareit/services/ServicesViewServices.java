@@ -7,29 +7,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
-import com.middlewareit.dao.DemoDao;
-import com.middlewareit.models.Demo;
+import com.middlewareit.dao.ServicesViewDao;
 import com.middlewareit.models.ResponseInfo;
+import com.middlewareit.models.ServicesView;
 
 /**
  * author: Naimul Hassan 
- * date: 7/6/2024
+ * date: 7/7/2024
  */
 /**
- * sample service class
+ * service class for the services view
  */
 
 @Component
-public class DemoServices {
-
+public class ServicesViewServices {
+	
 	@Autowired
-	DemoDao demoDao;
+	ServicesViewDao servicesViewDao;
 
-	public ResponseInfo<List<Demo>> getAllInfos() {
-		ResponseInfo<List<Demo>> responseInfo = new ResponseInfo<>();
+	public ResponseInfo<List<ServicesView>> getAllInfos() {
+		ResponseInfo<List<ServicesView>> responseInfo = new ResponseInfo<>();
 
 		try {
-			List<Demo> response = demoDao.findAll();
+			List<ServicesView> response = servicesViewDao.findAll();
 
 			responseInfo.setStatusCode(HttpStatus.OK.value());
 			responseInfo.setMessage("Successfully fetched!");

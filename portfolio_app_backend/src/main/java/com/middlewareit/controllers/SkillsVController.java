@@ -7,28 +7,28 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.middlewareit.models.Demo;
 import com.middlewareit.models.ResponseInfo;
-import com.middlewareit.services.DemoServices;
+import com.middlewareit.models.SkillsV;
+import com.middlewareit.services.SkillsVServices;
 
 /**
  * author: Naimul Hassan 
- * date: 7/3/2024
+ * date: 7/6/2024
  */
 /**
- * sample controller class
+ * controller class for the hero table
  */
 
 @RestController
-@RequestMapping("demo")
-public class DemoController {
+@RequestMapping("skills")
+public class SkillsVController {
 
 	@Autowired
-	DemoServices demoService;
+	SkillsVServices skillsVServices;
 
 	@GetMapping("all")
-	public ResponseInfo<List<Demo>> getAllMethod() {
-		return demoService.getAllInfos();
+	public ResponseInfo<List<SkillsV>> getAllMethod() {
+		return skillsVServices.getAllInfos();
 	}
 
 }

@@ -6,7 +6,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 /**
- * author: Naimul Hassan date: 7/3/2024
+ * author: Naimul 
+ * Hassan date: 7/3/2024
+ */
+/**
+ * sample dto class
  */
 
 @Entity
