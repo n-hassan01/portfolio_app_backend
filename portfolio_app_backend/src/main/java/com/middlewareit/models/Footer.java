@@ -17,6 +17,7 @@ public class Footer {
 	@Id
 	private String fullName;
 	private String description;
+	private String url;
 
 	public String getFullName() {
 		return fullName;
@@ -32,6 +33,14 @@ public class Footer {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 }
